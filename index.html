@@ -10,96 +10,167 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: #0a0a0a;
             color: #e0e0e0;
-            line-height: 1.7;
-            padding: 40px 20px;
+            line-height: 1.8;
+            padding: 48px 20px;
         }
         .container {
-            max-width: 720px;
+            max-width: 740px;
             margin: 0 auto;
         }
         h1 {
-            font-size: 2em;
+            font-size: 2.2em;
             color: #ffffff;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
         }
         h2 {
             font-size: 1.3em;
             color: #ffffff;
-            margin-top: 32px;
-            margin-bottom: 12px;
+            margin-top: 36px;
+            margin-bottom: 14px;
         }
         p, li {
             color: #b0b0b0;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            font-size: 0.97em;
         }
         ul {
             padding-left: 24px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         .subtitle {
-            color: #888;
-            margin-bottom: 32px;
+            color: #666;
+            margin-bottom: 36px;
+            font-size: 0.9em;
         }
-        a { color: #5e9eff; }
+        a { color: #5e9eff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .divider {
             border: none;
-            border-top: 1px solid #222;
-            margin: 32px 0;
+            border-top: 1px solid #1a1a1a;
+            margin: 40px 0;
         }
+        strong { color: #d0d0d0; }
+        .highlight {
+            background: #111;
+            border-left: 3px solid #5e9eff;
+            padding: 16px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .highlight p { margin-bottom: 0; }
+        .footer { color: #444; font-size: 0.82em; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Lock &amp; Focus</h1>
-        <p class="subtitle">Privacy Policy &bull; Effective March 6, 2026</p>
+        <p class="subtitle">Privacy Policy &bull; Last updated March 6, 2026</p>
 
         <hr class="divider">
 
         <h2>Overview</h2>
-        <p>Lock &amp; Focus is a macOS productivity app that helps you pick a task, start a focus timer, and get things done. Your privacy matters — this app is designed to keep your data local and under your control.</p>
+        <p>Lock &amp; Focus is a productivity application designed for macOS. It helps professionals, students, and focused individuals manage their time through structured focus sessions integrated with Apple Reminders and Apple Calendar.</p>
+        <p>We take your privacy seriously. This policy explains what data the app accesses, how that data is handled, and the rights you have over your information. The short version: <strong>we do not collect any of your data.</strong></p>
 
-        <h2>Data Collection</h2>
-        <p><strong>Lock &amp; Focus does not collect, store, or transmit any personal data to external servers.</strong></p>
-        <p>All data stays on your Mac:</p>
+        <h2>Our Core Privacy Principle</h2>
+        <div class="highlight">
+            <p><strong>Lock &amp; Focus is built entirely around local, on-device processing. No personal data, usage data, or behavioral data is collected, transmitted, stored on external servers, or shared with any third party — ever.</strong></p>
+        </div>
+
+        <h2>Data Collection &amp; Storage</h2>
+        <p>Lock &amp; Focus does not collect, track, or transmit any personal information. All app data is created and stored locally on your Mac:</p>
         <ul>
-            <li>Focus session history is stored locally using SwiftData on your device.</li>
-            <li>App settings and preferences are stored in local UserDefaults.</li>
-            <li>No analytics, tracking, or telemetry of any kind.</li>
-            <li>No user accounts or sign-in required.</li>
-            <li>No ads.</li>
+            <li><strong>Focus session history</strong> — Your completed session records (task name, duration, timestamps) are stored locally using Apple's SwiftData framework. This data exists only on your device and is never uploaded anywhere.</li>
+            <li><strong>App preferences</strong> — Settings such as your preferred timer duration, notification preferences, and integration toggles are stored in local UserDefaults on your Mac.</li>
+            <li><strong>Widget data</strong> — Active timer state is shared between the main app and the macOS widget through a local App Group container. This data never leaves your device.</li>
+        </ul>
+        <p>There are no user accounts, no sign-in, no registration, and no cloud sync. You own your data completely.</p>
+
+        <h2>What We Do NOT Do</h2>
+        <p>To be explicit about our privacy practices:</p>
+        <ul>
+            <li>We do <strong>not</strong> collect personal information of any kind.</li>
+            <li>We do <strong>not</strong> track your usage, behavior, or habits.</li>
+            <li>We do <strong>not</strong> use analytics services, crash reporting tools, or telemetry.</li>
+            <li>We do <strong>not</strong> display advertisements or work with ad networks.</li>
+            <li>We do <strong>not</strong> use cookies, pixels, fingerprinting, or any tracking technology.</li>
+            <li>We do <strong>not</strong> sell, share, rent, or trade any user information.</li>
+            <li>We do <strong>not</strong> have servers that receive data from your device.</li>
+            <li>We do <strong>not</strong> integrate any third-party SDKs, libraries, or services that collect data.</li>
         </ul>
 
-        <h2>Apple Reminders &amp; Calendar</h2>
-        <p>Lock &amp; Focus integrates with Apple Reminders and Apple Calendar through EventKit. This access is used solely to:</p>
+        <h2>Apple Reminders Integration</h2>
+        <p>Lock &amp; Focus requests access to Apple Reminders through Apple's EventKit framework. This permission is used to:</p>
         <ul>
-            <li>Display your reminders so you can pick a task to focus on.</li>
-            <li>Mark reminders as complete when you finish a focus session.</li>
-            <li>Create new reminders from within the app.</li>
-            <li>Display today's calendar events on the Today page.</li>
-            <li>Optionally create "Focus" calendar blocks when a session starts.</li>
+            <li>Display your incomplete reminders so you can select a task to focus on.</li>
+            <li>Automatically mark a reminder as complete when you finish a focus session.</li>
+            <li>Create new reminders directly from within the app.</li>
+            <li>Access your dedicated "Lock &amp; Focus" reminder list, or optionally all lists based on your settings.</li>
         </ul>
-        <p>This data is read and written only on your device through Apple's frameworks. It is never sent to any external server.</p>
+        <p>All reminder data is read and written locally on your device through Apple's secure frameworks. Lock &amp; Focus does not copy, cache, or transmit your reminder data to any external location.</p>
+
+        <h2>Apple Calendar Integration</h2>
+        <p>Lock &amp; Focus requests access to Apple Calendar through Apple's EventKit framework. This permission is used to:</p>
+        <ul>
+            <li>Display today's calendar events on the Today dashboard so you can see your schedule alongside your tasks.</li>
+            <li>Optionally create "Focus: [task name]" calendar events when a session starts, allowing you to see your focus time reflected on your calendar.</li>
+        </ul>
+        <p>Calendar data is accessed and written locally on your device. No calendar information is transmitted externally. The calendar focus block feature is optional and can be toggled off in Settings.</p>
 
         <h2>Notifications</h2>
-        <p>Lock &amp; Focus may send local notifications to alert you when a focus session completes, provide daily summaries, or remind you about your habit streak. These are local notifications — no push notification server is involved.</p>
-
-        <h2>Widget</h2>
-        <p>The Lock &amp; Focus widget displays your active timer status. Data is shared between the app and widget using a local App Group container on your device. No data leaves your Mac.</p>
+        <p>Lock &amp; Focus uses Apple's local notification system (UserNotifications framework) to deliver:</p>
+        <ul>
+            <li>Session completion alerts when a focus timer ends.</li>
+            <li>Optional daily summary notifications at 6:00 PM.</li>
+            <li>Optional habit streak reminders at 8:00 PM to encourage consistency.</li>
+        </ul>
+        <p>These are entirely local notifications generated on your Mac. No push notification server, no remote messaging service, and no external infrastructure is involved. All notification preferences can be configured or disabled in the app's Settings.</p>
 
         <h2>Third-Party Services</h2>
-        <p>Lock &amp; Focus does not use any third-party services, SDKs, analytics platforms, or advertising networks.</p>
+        <p>Lock &amp; Focus is a fully self-contained application. It does not integrate with, rely on, or communicate with any third-party services. Specifically:</p>
+        <ul>
+            <li>No analytics platforms (no Google Analytics, Mixpanel, Amplitude, or similar).</li>
+            <li>No crash reporting services (no Crashlytics, Sentry, or similar).</li>
+            <li>No advertising networks or demand-side platforms.</li>
+            <li>No social media SDKs or login providers.</li>
+            <li>No cloud storage or database services.</li>
+        </ul>
+        <p>The app communicates only with Apple's on-device frameworks (EventKit, SwiftData, WidgetKit, UserNotifications) — all of which operate locally on your Mac.</p>
+
+        <h2>Network Activity</h2>
+        <p>Lock &amp; Focus makes <strong>zero network requests</strong>. The app does not access the internet for any reason. It has no server endpoints, no API calls, and no background network activity. Your Mac's network connection is completely untouched by this app.</p>
+
+        <h2>Data Security</h2>
+        <p>Since all data remains on your device, it is protected by your Mac's built-in security features, including FileVault disk encryption, macOS App Sandbox, and your system login credentials. Lock &amp; Focus operates within Apple's App Sandbox, which restricts the app's access to only the resources it has been explicitly granted permission to use.</p>
+
+        <h2>Data Retention &amp; Deletion</h2>
+        <p>All data created by Lock &amp; Focus is stored locally on your Mac. You have complete control over it:</p>
+        <ul>
+            <li>You can delete all focus session history from within the app using the "Reset All Data" option in Settings.</li>
+            <li>Uninstalling Lock &amp; Focus removes all app data from your device.</li>
+            <li>Since no data is stored externally, there is nothing to request deletion of from any server.</li>
+        </ul>
+
+        <h2>GDPR &amp; International Privacy</h2>
+        <p>Lock &amp; Focus is compliant with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other international privacy regulations by design — because we do not collect any personal data. There is no data to process, store, or transfer. No consent management is required because no data collection occurs.</p>
+        <p>If you are located in the European Economic Area, United Kingdom, California, or any other jurisdiction with data protection laws, your rights are fully respected: there is simply no personal data held by the developer.</p>
+
+        <h2>Intended Audience</h2>
+        <p>Lock &amp; Focus is designed for adults and professionals seeking to improve their productivity and focus. The app is intended for users aged 17 and older in professional, academic, or personal productivity contexts. It is not designed for, marketed to, or intended for use by children under the age of 13.</p>
 
         <h2>Children's Privacy</h2>
-        <p>Lock &amp; Focus does not knowingly collect any information from children. The app does not collect information from anyone.</p>
+        <p>Lock &amp; Focus does not knowingly collect or solicit personal information from children under the age of 13. Because the app collects no personal information from any user, there is no risk of inadvertent collection of children's data. The app does not require or request any identifying information from any user regardless of age.</p>
+        <p>This app is not directed at children and does not contain content designed to appeal to children. If you believe a child has somehow provided personal information through this app, please contact us — though we want to emphasize that the app has no mechanism to receive or store such information.</p>
 
         <h2>Changes to This Policy</h2>
-        <p>If this privacy policy is updated, the changes will be posted on this page with an updated effective date.</p>
+        <p>We may update this privacy policy from time to time to reflect changes in the app or applicable regulations. When we make changes, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of Lock &amp; Focus after any changes constitutes acceptance of the updated policy.</p>
 
         <h2>Contact</h2>
-        <p>For questions about this privacy policy or feedback to improve the app, reach out through the App Store listing.</p>
+        <p>If you have questions, concerns, or feedback about this privacy policy or the Lock &amp; Focus app, you can reach us through the app's listing on the Mac App Store or by leaving a review with your feedback. We value user input and are committed to maintaining the highest standards of privacy.</p>
 
         <hr class="divider">
-        <p style="color: #555; font-size: 0.85em;">&copy; 2026 Muhammad Abdul Hakim. All rights reserved.</p>
+        <p class="footer">&copy; 2026 Muhammad Abdul Hakim. All rights reserved. Lock &amp; Focus is an independent macOS application. Apple, macOS, Reminders, Calendar, and WidgetKit are trademarks of Apple Inc.</p>
     </div>
 </body>
 </html>
